@@ -7,14 +7,31 @@
     android:layout_height="match_parent"
     tools:context="com.example.mariapizarro.topmovies.MainActivity">
 
-    <GridView
-        android:id="@+id/grid"
+    <RelativeLayout
+        android:id="@+id/loadingPanel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        android:numColumns="3">
+        >
 
-    </GridView>
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="250dp"
+            android:indeterminate="true" />
+
+        <GridView
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"
+            android:numColumns="3">
+
+        </GridView>
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
